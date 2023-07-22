@@ -4,7 +4,7 @@ import "./App.css";
 import AchievementLayout from "./layouts/AchievementLayout";
 import SkillScreen from "./screens/SkillScreen";
 import { MantineProvider } from "@mantine/core";
-import Test from "./screens/test";
+// import Test from "./screens/test";
 import Achievement from "./screens/Achievement";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<SkillScreen />} />
           <Route path="/achievement" element={<Achievement />} />
-          <Route path="/test" element={<Test />} />
+          {/* <Route path="/test" element={<Test />} /> */}
           <Route element={<AchievementLayout />}>
             {/* <Route path='/main/statistics/' element={<StatisticHome/>} /> */}
           </Route>

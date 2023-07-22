@@ -2,14 +2,6 @@
 import { FaUserTie, FaBook, FaAlignLeft, FaHeart } from "react-icons/fa";
 import { BsBoxArrowInUpRight } from "react-icons/bs";
 import { useRef } from "react";
-import Carousel from "../components/CirculareProgress";
-import CirculareProgress from "../components/CirculareProgress";
-import LinearProgress from "../components/LineareProgress";
-import {
-  skillsDesigner,
-  skillsDevMobile,
-  skillsDevWeb,
-} from "../utils/constant/skill";
 import {
   skillLanguages,
   skillSoftwares,
@@ -18,7 +10,8 @@ import {
 // import photo from "/photo.png";
 
 const SkillScreen = () => {
-  const [section1, section2, section3, section4, ele] = [
+  const [section1, section2, section3, section4] = [
+  // const [section1, section2, section3, section4, ele] = [
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
@@ -26,16 +19,16 @@ const SkillScreen = () => {
     useRef<HTMLDivElement>(null),
   ];
 
-  const carouselHandler = (list: any[], index: number) => {
-    return (
-      "h-full flex flex-row" +
-      " w-[" +
-      list.length * 800 +
-      "px] -translate-x-[" +
-      index * 800 +
-      "px]"
-    );
-  };
+  // const carouselHandler = (list: any[], index: number) => {
+  //   return (
+  //     "h-full flex flex-row" +
+  //     " w-[" +
+  //     list.length * 800 +
+  //     "px] -translate-x-[" +
+  //     index * 800 +
+  //     "px]"
+  //   );
+  // };
   const slideTo = (target: string) => {
     document.location.href = target;
   };
@@ -154,7 +147,7 @@ const SkillScreen = () => {
           </div>
         </div>
         <div className="h-[25%] flex justify-center items-center gap-10 bg-amber-50">
-          {passions.map((p, index) => (
+          {passions.map((p  )=> (
             <div className="p-1 bg-amber-50 rounded-xl">
               <div className=" p-1 bg-amber-100 rounded-xl">
                 <div className="text-center border border-slate-700 rounded-xl bg-slate-700 text-white text-sm font-light">
@@ -176,7 +169,7 @@ const SkillScreen = () => {
       >
         <div className=" h-max p-1 flex">
           <div className="w-full">
-            {[...Array(4)].map((index, _) => (
+            {[...Array(4)].map(( _) => (
               // <div className={(_%2==1)?"bg-slate-400 flex my-2 justify-end":"bg-slate-400 flex my-2"}>
               <div className={" flex my-6 items-center"}>
                 <div
@@ -209,7 +202,7 @@ const SkillScreen = () => {
           </div>
           <div className="p-0.5 rounded-full mx-5 bg-slate-500"></div>
           <div className="w-full mt-14">
-            {[...Array(3)].map((index, _) => (
+            {[...Array(3)].map(( _) => (
               // <div className={(_%2==1)?"bg-slate-400 flex my-2 justify-end":"bg-slate-400 flex my-2"}>
               <div className={" flex my-6 items-center flex-row-reverse"}>
                 <div
@@ -242,7 +235,7 @@ const SkillScreen = () => {
           </div>
         </div>
         <div className=" p-5 flex-wrap">
-          {[...Array(4)].map((index, _) => (
+          {[...Array(4)].map((_) => (
             // <div className={(_%2==1)?"bg-slate-400 flex my-2 justify-end":"bg-slate-400 flex my-2"}>
             <div className={" flex my-6"}>
               <div

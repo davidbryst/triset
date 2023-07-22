@@ -1,6 +1,7 @@
 const LinearProgress = ({technoImg, technoName, percent}:{technoImg: string, technoName: string, percent: number}) => {
   return (
     <div className="flex h-10 text-white gap-2 items-center justify-end">
+      <div className="hidden">{technoImg}</div>
       <div className="flex-1">{technoName}</div>
       <div className=""></div>
       <div style={{width: "13rem"}} className="bg-slate-900 h-2 rounded-md flex ">

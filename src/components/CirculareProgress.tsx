@@ -4,6 +4,8 @@ const CirculareProgress = ({percent, technoName, technoImg}:{percent:number, tec
     <div
       className=" w-28 h-28 relative flex flex-col items-center justify-center overflow-hidden rounded-full"
     >
+            <div className="hidden">{technoImg}</div>
+
       <svg className="w-20 h-20">
         <circle
           className="text-gray-300"
