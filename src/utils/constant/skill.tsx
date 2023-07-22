@@ -3,6 +3,7 @@ export type Skill = {
   img: string;
   percents: number;
 };
+
 export const skillsDevMobile: Skill[] = [
   {
     name: "Flutter",

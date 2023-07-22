@@ -1,17 +1,20 @@
 // import { SimpleGrid, Grid } from "@mantine/core";
-import {
-  FaUserTie,
-  FaListUl,
-  FaBook,
-  FaBraille,
-  FaAlignLeft,
-  FaHeart,
-} from "react-icons/fa";
+import { FaUserTie, FaBook, FaAlignLeft, FaHeart } from "react-icons/fa";
+import { BsBoxArrowInUpRight } from "react-icons/bs";
 import { useRef } from "react";
 import Carousel from "../components/CirculareProgress";
 import CirculareProgress from "../components/CirculareProgress";
 import LinearProgress from "../components/LineareProgress";
-import { skillsDesigner, skillsDevMobile, skillsDevWeb } from "../utils/constant/skill";
+import {
+  skillsDesigner,
+  skillsDevMobile,
+  skillsDevWeb,
+} from "../utils/constant/skill";
+import {
+  skillLanguages,
+  skillSoftwares,
+  skillTools,
+} from "../utils/constant/allSkill";
 // import photo from "/photo.png";
 
 const SkillScreen = () => {
@@ -94,7 +97,7 @@ const SkillScreen = () => {
               <FaBook />
             </span>
           </div>
-          <div className="h-40 w-0.5 rounded-full bg-gray m-1"></div>
+          <div className="h-10 w-0.5 rounded-full bg-gray m-1"></div>
           <div
             onMouseEnter={() => slideTo("#3")}
             className="p-1.5 border border-spacing-6 border-gray bg-trans rounded-full m-1"
@@ -103,7 +106,7 @@ const SkillScreen = () => {
               <FaAlignLeft />
             </span>
           </div>
-          <div className="h-5 w-0.5 rounded-full bg-gray m-1"></div>
+          <div className="h-10 w-0.5 rounded-full bg-gray m-1"></div>
           <div
             onMouseEnter={() => slideTo("#4")}
             className="p-1.5 border border-spacing-6 border-gray bg-trans rounded-full m-1"
@@ -273,21 +276,40 @@ const SkillScreen = () => {
         className=" bg-gradient-to-r from-amber-100 to-slate-300 h-screen p-5 flex justify-end items-center"
       >
         <div className="flex h-full w-[95%]">
+          <div className="flex-[1] gap-5 flex flex-col justify-center items-center"></div>
           <div className="flex-[1] gap-5 flex flex-col justify-center items-center">
-            <div className="h-10 w-52 rounded-xl bg-slate-600 flex justify-center items-center text-white font-semibold">
-              <span> Dev Web</span>
-            </div>
-            <div className="h-[85%] w-[85%] rounded-xl bg-slate-600 flex flex-wrap p-3">
-              {skillsDevWeb.map((skill) => (
-                <LinearProgress
-                  technoImg={skill.img}
-                  technoName={skill.name}
-                  percent={skill.percents}
-                />
-              ))}
+            <div className="h-[85%] w-[85%] rounded-xl bg-slate-600 flex flex-wrap p-6">
+              <div>
+                <div className="font-bold text-slate-100 text-xl">Language</div>
+                {skillLanguages.map((skill) => (
+                  <span className="p-1 px-3 bg-trans border border-gray rounded-2xl m-2 inline-block">
+                    {skill.name}
+                    {/* <span className="text-xs text-slate-700 ml-1">80%</span> */}
+                  </span>
+                ))}
+              </div>
+              <div>
+                <div className="font-bold text-slate-100 text-xl">
+                  Technologie
+                </div>
+                {skillTools.map((skill) => (
+                  <span className="p-1 px-3 bg-trans border border-gray rounded-2xl m-2 inline-block">
+                    {skill.name}
+                  </span>
+                ))}
+              </div>
+              <div>
+                <div className="font-bold text-slate-100 text-xl">Logiciel</div>
+                {skillSoftwares.map((skill) => (
+                  <span className="p-1 px-3 bg-trans border border-gray rounded-2xl m-2 inline-block">
+                    {skill.name}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
-          <div className="flex-[1] gap-5 flex flex-col justify-center items-center">
+
+          {/* <div className="flex-[1] gap-5 flex flex-col justify-center items-center">
             <div className="h-10 w-52 rounded-xl bg-slate-600 flex justify-center items-center text-white font-semibold">
               {" "}
               Dev Mobile
@@ -316,13 +338,77 @@ const SkillScreen = () => {
                 />
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div
         id="4"
-        className=" bg-gradient-to-r from-amber-100 to-slate-300 h-screen p-5"
-      ></div>
+        className=" bg-gradient-to-r from-amber-100 to-slate-300 h-screen p-5 flex justify-center items-center"
+      >
+        <div className="flex flex-col w-[75%] h-[75%] rounded-2xl p-5 bg-white border border-gray">
+          <div className="felx-[1]">
+            {/* <div>Disponible pour un contrat</div>
+            <div> */}
+            <span className="p-1 px-3 bg-trans border border-gray rounded-2xl m-2">
+              Freelance
+            </span>
+            <span className="p-1 px-3 bg-trans border border-gray rounded-2xl m-2">
+              Consultant
+            </span>
+            <span className="p-1 px-3 bg-trans border border-gray rounded-2xl m-2">
+              Employer
+            </span>
+            {/* </div> */}
+          </div>
+          {/* <div className="felx-[1]">
+            <div>Ce sont mes domaines de prédilections</div>
+            <div>
+              <span className="p-1 px-3 bg-trans border border-gray rounded-2xl m-2">UX/UI Design</span>
+              <span className="p-1 px-3 bg-trans border border-gray rounded-2xl m-2">Fullstack Web Developpement</span>
+              <span className="p-1 px-3 bg-trans border border-gray rounded-2xl m-2"></span>
+              <span className="p-1 px-3 bg-trans border border-gray rounded-2xl m-2"></span>
+              <span className="p-1 px-3 bg-trans border border-gray rounded-2xl m-2"></span>
+            </div>
+          </div> */}
+          <div className="felx-[1] border-b-0 p-5 border-slate-800">
+            {" "}
+            <span className="font-bold text-5xl text-slate-800">Contact</span>
+          </div>
+          <div className=" rounded-full bg-slate-800 p-1 mx-5"></div>
+          <div className="felx-[1] w-[80%] flex gap-5 justify-center px-20 pt-5">
+            <div className="m-2 font-semibold text-xl text-slate-800">
+              Email
+            </div>
+            <div className="flex-[1]">
+              {[
+                "davidBryster21@icloud.com",
+                "davidBryster21@gmail.com",
+                "david22works@gmail.com",
+              ].map((ele) => (
+                <div className="flex gap-2 my-2">
+                  {ele}{" "}
+                  <span>
+                    <BsBoxArrowInUpRight />
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div className="m-2 font-semibold text-xl text-slate-800">
+              Reseaux
+            </div>
+            <div className="flex-[1]">
+              {["Instagrame", "GitHub", "linkedin"].map((ele) => (
+                <div className="flex gap-2 my-2">
+                  {ele}{" "}
+                  <span>
+                    <BsBoxArrowInUpRight />
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
